@@ -1,11 +1,9 @@
 package com.example.jsonexample;
 
-import org.slf4j.MDC;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -16,11 +14,6 @@ public class JsonexampleApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(JsonexampleApplication.class, args);
-        List<RFID> rfidList = new ArrayList<>();
-        List<Tag> taglist = new ArrayList<>();
-
-        rfidList.add(new RFID(1));
-        taglist.add(new Tag(1));
         List<Test> testlist = new ArrayList<>();
         testlist.add(new Tag(1));
         testlist.add(new RFID(1));
