@@ -16,18 +16,13 @@ public class JsonexampleApplication {
         SpringApplication.run(JsonexampleApplication.class, args);
         List<Test> testlist = new ArrayList<>();
         testlist.add(new Tag(1));
-        testlist.add(new RFID(1));
-//        new Test<>().add(new RFID(1),new Tag(1));
-//        for (int i = 0; i < rfidList.size(); i++)
-//        {
-//            System.out.println(rfidList.get(i).getRssi());
-//            System.out.println(taglist.get(i).getTag_id());
-//
-//        }
-//        System.out.println(testlist.get(0).getTag_id());
-//        System.out.println(testlist.get(1).getRssi());
-//        System.out.println(Arrays.toString(Arrays.stream(testlist.toArray()).toArray()));
-////        System.out.println(hList.get(0));
+        testlist.get(0).list.add(new RFID(1));
+        testlist.get(0).list.add(new RFID(66));
+
+        testlist.add(new Tag(2));
+        testlist.get(1).list.add(new RFID(2));
+        testlist.get(1).list.add(new RFID(77));
+
         for (Test test : testlist) {
             System.out.println("[" + test.getTag_id() + ", [" + test.getList().stream().map(i -> String.valueOf(i)).collect(Collectors.joining(", ")) + "]]");
         }
